@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ru"> <!--<![endif]-->
+<head>
+	<title>Система управления сайтом HostCMS, движок сайта, CMS, платформа для создания интернет-магазина</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta name="description" content="Удобный и функциональный движок для сайта и интернет-магазина, CMS с большими возможностями, платформа для магазина — система управления сайтом HostCMS">
+	<meta name="keywords" content="cms, движок для сайта, система управления сайтом, система управления контентом, Content Management System, платформа для создания магазина">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Page-Enter" content="BlendTrans(Duration=0.5)">
+	<meta name='yandex-verification' content='5455757f6bf33e81'>
+	<meta name="google-site-verification" content="WJUOGMFkwljlul-JiIVLa1Y38HbFCDjPZDyFoiEnO5g" />
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href="http://www.hostcms.ru/news/rss/" rel="alternate" type="application/rss+xml" title="Новости HostCMS">
+
+	<link rel="stylesheet" type="text/css" href="/hostcmsfiles/css/32dd2153dff206a107d81c3d5f50dd28.css?1623321548" />
+
+	<!-- CSS for IE -->
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="/templates/template2/ie/ie.css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="/templates/template2/ie/html5shiv.js"></script>
+	<script type="text/javascript" src="/templates/template2/ie/respond.js"></script>
+	<![endif]-->
+
+	<script src="/hostcmsfiles/js/c5b254f17ea6e756df670bfaa690a03b.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="/templates/template2/ie/html5shiv.js"></script>
+	<script type="text/javascript" src="/templates/template2/ie/respond.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	$(function() {
+		$('.stars').stars({
+			inputType: "select", disableValue: false
+		});
+
+		// переход по ссылке(class="button")
+		$('.button:has(a)').click(function(){window.location.href = $(this).find('a').attr('href')});
+
+		// SyntaxHighlighter
+		prettyPrint();
+
+		$('#gallery a:has(img)').lightBox();
+
+		//Slick
+		$(".services-carousel").slick({
+			dots: false,
+			infinite: true,
+			centerMode: false,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			variableWidth: true,
+			autoplay: true,
+			autoplaySpeed: 2000
+		});
+
+		// CounterUp
+        $('.counter-license').counterUp({
+            delay: 10,
+            time: 500
+        });
+	});
+
+	// Footer
+	function resizeFooter() {
+		var footerMain = $("footer.footer-main"),
+			mainContainer = $('.main-container'),
+			footerHeight = footerMain.height();
+
+		footerMain.removeClass("navbar-fixed-bottom");
+
+		if ($(document).height() <= $(window).height()) {
+			footerMain.addClass("navbar-fixed-bottom");
+			mainContainer.css('margin-bottom', footerHeight);
+		}
+		else
+		{
+			mainContainer.css('margin-bottom', '');
+		}
+	}
+	$(window).resize(resizeFooter);
+	$(function(){
+		setTimeout(function(){ resizeFooter(); }, 1500);
+	});
+	</script>
+</head>
+<body>
+
+<!-- <div id="share-wrapper">
+    <ul class="share-inner-wrp">
+        <li class="vk button-wrap"><a href="#">Вконтакте</a></li>
+        <li class="facebook button-wrap"><a href="#">Facebook</a></li>
+        <li class="twitter button-wrap"><a href="#">Twitter</a></li>
+        <li class="google button-wrap"><a href="#">Google+</a></li>
+        <li class="email button-wrap"><a href="#">Email</a></li>
+    </ul>
+</div>-->
+
+<header>
+
+	<div class="container">
+		<div class="container-fluid">
+			<div class="row logo-line ">
+				<div class="col-xs-12 col-sm-4">
+					<a href="/"><img data-src="/images/logo.png" height="35" alt="HostCMS" title="HostCMS" class="logo lazyload"></a>
+				</div>
+				<div class="col-xs-12 col-sm-4 text-align-center">
+					
+					<div class="license">Выдано <span class="counter-license">132704</span> лицензии</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 top-icons">
+					<div id="little-cart" class="top-cart">
+						
+
+<div id="little_cart" class="top-cart">
+  <a class="top-cart-link" href="/shop/cart/" title="Перейти в корзину">
+    <span>0</span>
+  </a>
+</div>
+					</div>
+
+					<div class="top-search">
+						<a class="top-search-link" href="/search/"></a>
+					</div>
+
+					<div class="top-user">
+						<a class="top-user-link" href="/users/"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			
+
+<nav class="navbar navbar-menu">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="main_menu">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="/">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="dropdown">
+        <a href="/hostcms/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Продукт<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/hostcms/">Преимущества</a>
+          </li>
+          <li>
+            <a href="/hostcms/editions/">Редакции и цены</a>
+          </li>
+          <li>
+            <a href="/hostcms/templates/">Шаблоны дизайна</a>
+          </li>
+          <li>
+            <a href="/hostcms/multi-site/">Многосайтовость</a>
+          </li>
+          <li>
+            <a href="/shop/market/">Магазин приложений</a>
+          </li>
+          <li>
+            <a href="/hostcms/system-requirements/">Системные требования</a>
+          </li>
+          <li>
+            <a href="/hostcms/safety/">Безопасность системы</a>
+          </li>
+          <li>
+            <a href="/hostcms/modules/">Модули</a>
+          </li>
+          <li>
+            <a href="/hostcms/application-area/">Области применения</a>
+          </li>
+          <li>
+            <a href="/hostcms/payment/">Оплата и доставка</a>
+          </li>
+          <li>
+            <a href="/hostcms/interface/">Интерфейс системы</a>
+          </li>
+          <li>
+            <a href="/hosting/">Хостинги</a>
+          </li>
+          <li>
+            <a href="/hostcms/projects/">Примеры внедрения</a>
+          </li>
+          <li>
+            <a href="/hostcms/opinion/">Отзывы</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/hostcms/editions/free/">Скачать</a>
+      </li>
+      <li>
+        <a href="/shop/">Купить</a>
+      </li>
+      <li>
+        <a href="/hostcms/demo/">Демо</a>
+      </li>
+      <li class="dropdown">
+        <a href="/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Помощь<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/support/">Техническая поддержка</a>
+          </li>
+          <li>
+            <a href="/documentation/">Документация</a>
+          </li>
+          <li>
+            <a href="/support/updates/">Обновления CMS</a>
+          </li>
+          <li>
+            <a href="/support/wishlist/">Пожелания и предложения</a>
+          </li>
+          <li>
+            <a href="/forums/">Форум</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/integration/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Найти разработчика<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/integration/partners/">Список партнеров</a>
+          </li>
+          <li>
+            <a href="/integration/">Заказать выполнение работ</a>
+          </li>
+          <li>
+            <a href="/integration/services/">Дополнительные услуги</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/partners/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Стать партнером<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/partners/partnership/">Дизайн-студиям</a>
+          </li>
+          <li>
+            <a href="/partners/hosting/">Хостинг-провайдерам</a>
+          </li>
+          <li>
+            <a href="/partners/education/">Некоммерческим организациям</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/company/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Компания<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/company/">О нас</a>
+          </li>
+          <li>
+            <a href="/company/contacts/">Контактные данные</a>
+          </li>
+          <li>
+            <a href="/news/">Новости</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/users/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Личный кабинет<span class="caret hidden-sm hidden-md hidden-lg"></span></a>
+        <ul class="dropdown-menu dropdown-menu-main">
+          <li>
+            <a href="/users/">Войти</a>
+          </li>
+          <li>
+            <a href="/users/registration/">Регистрация</a>
+          </li>
+          <li>
+            <a href="/users/restore_password/">Восстановление пароля</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="container main-container"> -->
+<script>
+function resizeMockup() {
+    if ($(window).width() < 992) {
+        $(".mockup-div").insertBefore($(".left-features-div"));
+    } else {
+		$(".mockup-div").insertAfter($(".left-features-div"));
+    }
+}
+$(window).resize(resizeMockup);
+$(function() {
+	resizeMockup();
+});
+</script>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 text-align-center">
+			<h1 class="services-title">Система управления сайтом HostCMS</h1>
+			<p class="index-description">Профессиональная, быстрая и удобная система управления сайтом для создания и поддержки интернет-магазинов, корпоративных и информационных сайтов. Собственный интернет-магазин или сайт — быстро и удобно.</p>
+		</div>
+	</div>
+	<div class="row features">
+		<div class="col-xs-12 col-sm-6 col-md-3 left-features-div">
+			<ul class="features-left">
+				<li>
+					<i class="fa fa-desktop"></i>
+					<div class="features-left-inner">
+						<h4>Адаптивный интерфейс</h4>
+						<p>Доступен на смартфонах, планшетах и настольных компьютерах.</p>
+					</div>
+				</li>
+				<li>
+					<i class="fa fa-line-chart"></i>
+					<div class="features-left-inner">
+						<h4>Ускорение работы сайта</h4>
+						<p>Многоуровневая система кэширования и компрессии.</p>
+					</div>
+				</li>
+				<li>
+					<i class="fa fa-html5"></i>
+					<div class="features-left-inner">
+						<h4>Современные технологии</h4>
+						<p>Новые решения, ORM, QueryBuilder, MVC, гибкая система событий.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-6 mockup-div">
+			<img class="img-centered img-responsive mockup lazyload" alt="Система управления сайтом HostCMS для интернет-магазинов и корпоративных сайтов" title="Система управления сайтом HostCMS для интернет-магазинов и корпоративных сайтов" data-src="/images/index/mockup.png" />
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<ul class="features-right">
+				<li>
+					<i class="fa fa-users"></i>
+					<div class="features-right-inner">
+						<a href="/hostcms/multi-site/">
+							<h4>Многосайтовость</h4>
+							<p>Создание сайтов, управляемых одной системой управления.</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<i class="fa fa-life-ring"></i>
+					<div class="features-right-inner">
+						<a href="/support/">
+							<h4>Поддержка</h4>
+							<p>Оперативная и квалифицированная техническая поддержка.</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<i class="fa fa-phone"></i>
+					<div class="features-right-inner">
+													<h4>Мы работаем с 9 до 18</h4>
+													<p>
+							<a href="tel:+74952234650" class="red"><small>(495)</small> 223-46-50</a>,
+							<a href="tel:+78124483890" class="red"><small>(812)</small> 448-38-90</a>
+							<br/>
+							<a href="tel:88003334991" class="red"><small>(800)</small> 333-49-91</a>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row cms-buttons">
+		<div class="col-xs-12 no-padding-left text-align-center">
+			<a class="btn btn-red btn-lg btn-white-text" href="/shop/">Купить</a>
+			<a class="btn btn-orange btn-lg btn-white-text" href="/hostcms/editions/free/">Скачать</a>
+			<a class="btn btn-yellow btn-lg btn-white-text" href="/hostcms/editions/">Сравнить</a>
+		</div>
+	</div>
+	<div class="row cms-info-block">
+		<div class="col-xs-12 col-md-4">
+			<h2><a href="/shop/market/shop-templates/">Интернет-магазин</a></h2>
+			<div class="cms-info-block-wrapper">
+				<div><a href="/shop/market/shop-templates/"><img class="lazyload" data-src="/images/index/shop.png" /></a></div>
+				<div><p>Множество платежных систем, импорт из 1С и Excel, Яндекс.Маркет, фильтр, поиск, скидки, купоны и многое другое.</p></div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<h2><a href="/shop/market/templates/">Корпоративный сайт</a></h2>
+			<div class="cms-info-block-wrapper">
+				<div><a href="/shop/market/templates/"><img class="lazyload" data-src="/images/index/corporate.png" /></a></div>
+				<div><p>Идеальное решение для корпоративных сайтов — от сайта-визитки до крупного портала. Шаблоны, техподдержка.</p></div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<h2><a href="/hostcms/editions/free/">Бесплатная версия</a></h2>
+			<div class="cms-info-block-wrapper">
+				<div><a href="/hostcms/editions/free/"><img class="lazyload" data-src="/images/index/free.png" /></a></div>
+				<div><p>Базовая редакция с богатым функционалом, включая интернет-магазин. Бесплатные шаблоны, быстрая установка!</p></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 no-padding-left text-align-center">
+			
+
+<div class="row">
+  <h1>
+						Готовые интернет-магазины
+					</h1>
+</div>
+<div class="demo-wrapper main-page">
+  <div>
+    <a href="/shop/market/shop-templates/multipurpose/t8903001/">
+      <img alt="Универсальный интернет-магазин" data-src="/upload/shop_1/3/2/3/item_3239/small_shop_items_catalog_image3239.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/shop-templates/multipurpose/t8903001/" class="market-main-page">Универсальный интернет-магазин</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/shop-templates/multipurpose/sites43/">
+      <img alt="Интернет-магазин,  №43" data-src="/upload/shop_1/3/0/6/item_3060/small_shop_items_catalog_image3060.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/shop-templates/multipurpose/sites43/" class="market-main-page">Интернет-магазин,  №43</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/shop-templates/gifts-and-flowers/tmpl48171499234/">
+      <img alt="Готовый интернет-магазин Цветов" data-src="/upload/shop_1/3/5/2/item_3529/small_shop_items_catalog_image3529.png" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/shop-templates/gifts-and-flowers/tmpl48171499234/" class="market-main-page">Готовый интернет-магазин Цветов</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/shop-templates/interior/hmp-hipster-furniture/">
+      <img alt="Готовый интернет-магазин мебели" data-src="/upload/shop_1/2/1/6/item_2165/small_shop_items_catalog_image2165.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/shop-templates/interior/hmp-hipster-furniture/" class="market-main-page">Готовый интернет-магазин мебели</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/shop-templates/multipurpose/adaptive-internet-shop-no-10/">
+      <img alt="Адаптивный интернет-магазин №10" data-src="/upload/shop_1/2/7/0/item_2701/small_shop_items_catalog_image2701.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/shop-templates/multipurpose/adaptive-internet-shop-no-10/" class="market-main-page">Адаптивный интернет-магазин №10</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/">
+      <img data-src="/images/market/market-more.png" class="market-main-page-image lazyload" />
+    </a>
+    <div>
+      <a href="/shop/market/shop-templates/" class="market-main-page"> + еще 36 готовых магазинов</a>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 no-padding-left text-align-center">
+			
+
+<div class="row">
+  <h1>
+						Готовые сайты
+					</h1>
+</div>
+<div class="demo-wrapper main-page">
+  <div>
+    <a href="/shop/market/templates/sport-and-medicine/site78/">
+      <img alt="SPA и массаж, №78" data-src="/upload/shop_1/3/4/3/item_3438/small_shop_items_catalog_image3438.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/templates/sport-and-medicine/site78/" class="market-main-page">SPA и массаж, №78</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/templates/education/sites35/">
+      <img alt="Школа, студия, клуб, обучение №35" data-src="/upload/shop_1/2/6/3/item_2635/small_shop_items_catalog_image2635.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/templates/education/sites35/" class="market-main-page">Школа, студия, клуб, обучение №35</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/templates/auto/hmp-auto-service/">
+      <img alt="Сайт автосервиса" data-src="/upload/shop_1/2/1/2/item_2123/small_shop_items_catalog_image2123.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/templates/auto/hmp-auto-service/" class="market-main-page">Сайт автосервиса</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/templates/services/t1290402/">
+      <img alt="Адаптивный сайт (клининговая компания 1)" data-src="/upload/shop_1/3/1/3/item_3134/small_shop_items_catalog_image3134.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/templates/services/t1290402/" class="market-main-page">Адаптивный сайт (клининговая компания 1)</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/templates/auto/t1390051/">
+      <img alt="Адаптивный сайт (транспортная компания)" data-src="/upload/shop_1/3/0/2/item_3028/small_shop_items_catalog_image3028.jpg" class="market-main-page-image lazyload" />
+    </a>
+    <div class="margin-top-5">
+      <a href="/shop/market/templates/auto/t1390051/" class="market-main-page">Адаптивный сайт (транспортная компания)</a>
+    </div>
+  </div>
+  <div>
+    <a href="/shop/market/">
+      <img data-src="/images/market/market-more.png" class="market-main-page-image lazyload" />
+    </a>
+    <div>
+      <a href="/shop/market/templates/" class="market-main-page"> + еще 155 готовых сайтов</a>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+
+	
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			
+
+<p class="title">О нас говорят!</p>
+<div class="about-us">
+  <div class="row">
+    <div class="col-xs-12 margin-bottom-10">
+      <div class="about-us-inner">
+        <div class="about-us-text"><i class="fa fa-quote-left"></i>Идеальный продукт для&nbsp;разработки интернет-проектов любого уровня! Это&nbsp;мнение не&nbsp;только наших специалистов, но&nbsp;и&nbsp;наших клиентов, которые используют HostCMS в&nbsp;повседневной работе!</div>
+      </div>
+    </div>
+  </div>
+  <div class="row margin-bottom-20">
+    <div class="col-xs-4">
+      <div class="about-us-inner">
+        <div class="opinion-image">
+          <a href="/hostcms/opinion/jenix.ru/">
+            <img class="lazyload" data-src="/upload/information_system_8/2/6/7/item_2674/small_information_items_2674.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <div class="about-us-inner">
+        <div class="about-us-author">Ширинкин Евгений Александрович
+<br />Руководитель интернет-проектов
+<br />Студия интересных решений Jenix.ru</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 margin-bottom-10">
+      <div class="about-us-inner">
+        <div class="about-us-text"><i class="fa fa-quote-left"></i><p>В HostCMS есть все, что&nbsp;необходимо для&nbsp;эффективного продвижения сайтов! HostCMS сама выполняет множество операций, которые раньше приходилось делать в&nbsp;ручную.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="row margin-bottom-20">
+    <div class="col-xs-4">
+      <div class="about-us-inner">
+        <div class="opinion-image">
+          <a href="/hostcms/opinion/seoigor/">
+            <img class="lazyload" data-src="/upload/information_system_8/3/1/5/item_3158/small_information_items_3158.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <div class="about-us-inner">
+        <div class="about-us-author">Овсянников Игорь Констинтинович</div>
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			
+
+<p class="title">Новости</p>
+<div class="news-list">
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">23 июня 2021</div>
+      <a href="/news/update-6.9.8/">Обновление 6.9.8. Статусы товаров в заказе, группы SEO-фильтров, виды зачислений бонусов. Добавлен импорт/экспорт вкладок, а также упрощенный импорт модификаций</a>
+    </div>
+  </div>
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">12 апреля 2021</div>
+      <a href="/news/new-price-april-2021/">Новые цены на «Мой сайт» и «Малый бизнес» с 26 апреля</a>
+    </div>
+  </div>
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">10 марта 2021</div>
+      <a href="/news/update-6.9.7/">Обновление 6.9.7. PHP 8, улучшена работа со списками, выгрузка в YML в ценах магазина, драйверы печати PDF, интерфейс управления таблицами</a>
+    </div>
+  </div>
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">26 ноября 2020</div>
+      <a href="/news/update-6.9.6/">Обновление 6.9.6. Вкладки для товаров, ограничение доступа сотрудников, сертификаты, боты, проекты в CRM</a>
+    </div>
+  </div>
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">11 августа 2020</div>
+      <a href="/news/update-6.9.5/">Обновление 6.9.5. Маркировка, иерархия статусов заказов, улучшения быстрого фильтра</a>
+    </div>
+  </div>
+  <div class="row margin-bottom-10">
+    <div class="col-xs-12">
+      <div class="date">26 марта 2020</div>
+      <a href="/news/update-6.9.3/">Обновление 6.9.3. Адресное хранение на складе, свёртка цен и остатков</a>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 text-align-center">
+			<p class="title">Платежные системы, доставки и сервисы</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<section class="services-carousel slider-logo">
+				<div>
+					<img class="lazyload" data-src="/images/services/robokassa.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/webmoney.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/moisklad.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/liqpay.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/acquiropay.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/assist.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/yookassa.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/payanyway.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/paypal.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/qiwi.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/1c.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/rpost.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/rbk.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/intellectmoney.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/visa.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/mastercard.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/maestro.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/dellin.png">
+				</div>
+				<div>
+					<img class="lazyload" data-src="/images/services/sdek.png">
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="row hidden-print">
+		<div class="col-xs-12 text-align-center">
+			<p class="title">Присоединяйтесь к нам в Твиттере и Вконтакте</p>
+		</div>
+	</div>
+	<div class="row hidden-print">
+		<div class="col-xs-12 col-md-6">
+			<div class="add-twitter">
+				<a class="twitter-timeline" data-height="185" data-link-color="#f55555" href="https://twitter.com/hostcms">Твиты от HostCMS</a>
+			</div>
+			<script>
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+				if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+				js.src="//platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js,fjs);}
+			}(document,"script","twitter-wjs");
+			</script>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<div id="vk_groups" class="add-vk"></div>
+			<script src="https://vk.com/js/api/openapi.js?142" type="text/javascript"></script>
+			<script type="text/javascript">
+				VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 41132178);
+			</script>
+		</div>
+	</div>
+</div><!-- </div> -->
+
+<footer class="footer-main">
+	<div class="container">
+		<div class="row directory">
+			<div class="col-xs-4 col-md-2 column">
+				<a href="/" class="d1">О HostCMS</a>
+				<ul>
+				<li><a href="/shop/">Купить онлайн</a></li>
+				<li><a href="/hostcms/editions/free/">Скачать бесплатно</a></li>
+				<li><a href="/shop/market/templates/">Готовые сайты</a></li>
+				<li><a href="/shop/market/shop-templates/">Готовые интернет-магазины</a></li>
+				<li><a href="/hostcms/demo/">Демо-версия</a></li>
+				<li><a href="/hostcms/opinion/">Отзывы пользователей</a></li>
+				</ul>
+			</div>
+				<div class="col-xs-4 col-md-2 column">
+				<a href="/hostcms/editions/" class="d1">Редакции HostCMS</a>
+				<ul>
+				<li><a href="/hostcms/editions/free/">Халява</a></li>
+				<li><a href="/hostcms/editions/my-site/">Мой сайт</a></li>
+				<li><a href="/hostcms/editions/small-business/">Малый бизнес</a></li>
+				<li><a href="/hostcms/editions/business/">Бизнес</a></li>
+				<li><a href="/hostcms/editions/corporation/">Корпорация</a></li>
+				</ul>
+			</div>
+				<div class="col-xs-4 col-md-2 column">
+				<span class="d1">Возможности</span>
+				<ul>
+				<li><a href="/hostcms/modules/">Модули</a></li>
+				<li><a href="/hostcms/multi-site/">Многосайтовость</a></li>
+				<li><a href="/hostcms/">Преимущества</a></li>
+				<li><a href="/hostcms/safety/">Безопасность</a></li>
+				<li><a href="/shop/market/">Магазин приложений</a></li>
+				<li><a href="/hostcms/interface/">Интерфейс</a></li>
+				</ul>
+			</div>
+			<div class="clear-xs clear-sm"></div>
+			<div class="col-xs-4 col-md-2 column">
+				<a href="/support/" class="d1">Поддержка</a>
+				<ul>
+				<li><a href="/support/">Регламент работы</a></li>
+				<li><a href="/documentation/">Документация</a></li>
+				<li><a href="/support/updates/">Обновления</a></li>
+				<li><a href="/forums/">Форум</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-md-2 column">
+				<a href="/hostcms/application-area/" class="d1">Области применения</a>
+				<ul>
+				<li><a href="/hostcms/application-area/corporate-sites/">Корпоративные сайты</a></li>
+				<li><a href="/hostcms/application-area/shops/">Интернет-магазины</a></li>
+				<li><a href="/hostcms/application-area/news-sites/">Новостные сайты</a></li>
+				<li><a href="/hostcms/application-area/helpdesk/">Системы Helpdesk</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-md-2 column">
+				<span class="d1">Заказать сайт</span>
+				<ul>
+				<li><a href="/integration/partners/">У дизайн-студий</a></li>
+				<li><a href="/integration/">На бирже проектов</a></li>
+				</ul>
+				
+				<span class="d1 column-second">Партнерская программа</span>
+				<ul>
+				<li><a href="/partners/partnership/">Дизайн-студиям</a></li>
+				<li><a href="/partners/hosting/">Хостинг-провайдерам</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row footer">
+			<div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+				&copy; 2005&mdash;2021 ООО &laquo;Хостмэйк&raquo;<br>
+				Телефон в Москве: <strong>+7 (495) 223-46-50</strong><br />
+				Телефон в Санкт-Петербурге: <strong>+7 (812) 448-38-90</strong><br />
+				Бесплатный телефон для регионов: <strong>8 (800) 333-49-91</strong><br />
+				Электронная почта: <script>//<![CDATA[
+function hostcmsEmail(c){return c.replace(/[a-zA-Z]/g, function (c){return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c-26);})}document.write ('<a  href="mailto:' + hostcmsEmail('vasb@ubfgpzf.eh') + '">' + hostcmsEmail('vasb@ubfgpzf.eh') + '</a>');//]]>
+</script><br />
+				<a href="/company/privacy/">Политика конфиденциальности</a> <span class="rating">16+</span>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-4 text-align-center line-height">
+				<div class="social-media">
+					<a href="http://twitter.com/hostcms" target="_blank" title="Twitter">
+						<i class="fa fa-twitter tt"></i>
+					</a>
+					<a href="http://vk.com/hostcms_ru" target="_blank" title="ВКонтакте">
+						<i class="fa fa-vk vk"></i>
+					</a>
+					<a href="https://github.com/HostCMS/hostcms6.free" target="_blank" title="GitHub">
+						<i class="fa fa-github gh"></i>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 col-lg-4 padding-top-20">
+				<form method="get" action="/search/">
+					<div class="input-group">
+						<input type="search" name="text" class="form-control input-sm float-none">
+						<span class="input-group-btn">
+							<button class="btn btn-red btn-sm btn-white-text" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+				<noindex><p>Продолжая использовать сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных на условиях <a href="/company/privacy/">политики обработки cookie-файлов</a>.</p></noindex>
+			</div>
+		</div>
+	</div>
+
+	<!-- HostCMS Counter -->
+	<script language="javascript">
+	js_v="1.0";path="rand="+Math.random()+"&id=9&refer="+escape(document.referrer)+"&amp;current_page="+escape(window.location.href);
+	document.cookie="_hc_check=1; path=/"; path+="&cookie="+(document.cookie?"Y":"N");
+	</script>
+	<script language="javascript1.1">
+	js_v="1.1";path+="&java="+(navigator.javaEnabled()?"Y":"N")
+	</script>
+	<script language="javascript1.2">js_v="1.2";
+	path+="&screen="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,9)=="Microsoft"))?screen.colorDepth:screen.pixelDepth)
+	</script>
+	<script language="javascript1.3">js_v="1.3";
+	</script>
+	<script language="javascript">path+="&js_version="+js_v;
+	document.write("<a href=http://www.hostcms.ru/><img src='//www.hostcms.ru/counter/counter.php?"+path+"&counter=0' border=0 alt=\"HostCMS Counter\" width=\"1\" height=\"1\"></a>")
+	</script><noscript><a href=http://www.hostcms.ru/><img src="//www.hostcms.ru/counter/counter.php?id=1&counter=0" border=0 alt="HostCMS Counter" width=\"1\" height=\"1\"></a></noscript>
+	<!-- HostCMS Counter -->
+
+	<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter88351 = new Ya.Metrika({id:88351, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true, ut:"noindex"}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/88351?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116128548-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-116128548-1');
+	</script>
+
+	<!-- BEGIN JIVOSITE CODE {literal} -->
+	<script type='text/javascript'>
+	(function(){ var widget_id = '5c7wYb9k8I';
+	var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
+	})();
+
+		</script>
+	<!-- {/literal} END JIVOSITE CODE -->
+</footer>
+
+<link href='/templates/template2/fonts/roboto.css' rel='stylesheet' type='text/css'>
+
+</body>
+</html>
